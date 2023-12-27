@@ -4,6 +4,7 @@ import LaunchPhoto from "../assets/launch.png";
 import styles from "../app/page.module.css";
 import PlayStore from "../assets/playstore.svg";
 import AppStore from "../assets/appstore.svg";
+import Link from "next/link";
 
 const Launch = () => {
   return (
@@ -74,20 +75,28 @@ const Launch = () => {
                 gap: "1rem",
               }}
             >
-              <Image
-                style={{
-                  height: "10rem",
-                  width: "10rem",
-                }}
-                src={AppStore}
-              />
-              <Image
-                style={{
-                  height: "10rem",
-                  width: "10rem",
-                }}
-                src={PlayStore}
-              />
+              <Link href={"https://apps.apple.com/us/app/diagno/id6474567156"}>
+                <Image
+                  style={{
+                    height: "10rem",
+                    width: "10rem",
+                  }}
+                  src={AppStore}
+                />
+              </Link>
+              <Link
+                href={
+                  "https://play.google.com/store/apps/details?id=com.diagno"
+                }
+              >
+                <Image
+                  style={{
+                    height: "10rem",
+                    width: "10rem",
+                  }}
+                  src={PlayStore}
+                />
+              </Link>
             </div>
           </div>
         </div>

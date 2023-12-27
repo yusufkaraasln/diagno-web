@@ -16,8 +16,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log(show);
-
   return (
     <main className={styles.main}>{show ? <Stethescope /> : <Launch />}</main>
   );
