@@ -1,7 +1,17 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import styles from "../app/page.module.css";
+import { useRouter } from "next/navigation";
 
 const Stethescope = () => {
+  const router = useRouter();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("/launch");
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <div className={styles.stethoscope_c1}>
